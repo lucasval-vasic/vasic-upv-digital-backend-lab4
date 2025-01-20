@@ -91,7 +91,7 @@ Copy these SPEF files to sta/in folder so they can be later read by Tempus to an
 
 ### Initial run
 
-We are now ready to perform our first STA analysis for today. We will analyze our design on the 2 timing corners defined by the 0.18um manufacturing process: fast and slow. The sta folder of sync_fifo already contains the setup to run this mode except for the timing constraints file. Copy over the file from Lab 1 to sta/in but modify the name to be sync_fifo_func.sdc (func stands for functional mode).
+We are now ready to perform our first STA analysis for today, we will need to exit Innovus, cd into sta/run folder and run Tempus. We will analyze our design on the 2 timing corners defined by the 0.18um manufacturing process: fast and slow. The sta folder of sync_fifo already contains the setup to run this mode except for the timing constraints file. Copy over the file from Lab 1 to tcons/ folder but modify the name to be sync_fifo_func.sdc (func stands for functional mode).
 
 Execute the sta/run/sta.tcl script and observe the multiple reports. Notice how for each of the reports produced by STA in Lab 1 now we have 2 files, one per each of the process corners. Check out the equivalent file across both corners and notice how the propagation delays are different.
 
