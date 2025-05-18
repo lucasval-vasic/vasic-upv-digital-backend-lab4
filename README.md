@@ -157,4 +157,4 @@ After either rerunning synthesis with the fixed command or renaming the expected
 
 If we analyze the output of this we can see that very detailed information is produced about the mapping and the compare points. Check the log/rtl2final.lec.log logfile to ensure you don't miss anything of the output. The key line is the one starting with "No of diff points", this prints out the number of non-equivalent points. If everything went well this should report 0 non-equivalent points.
 
-Once you have been the analysis try to modify either the netlist or the RTL code to produce non-equivalent points and the failure of LEC verification.
+Once you have seen the analysis pass try to modify either the netlist or the RTL code to produce non-equivalent points and the failure of LEC verification.
