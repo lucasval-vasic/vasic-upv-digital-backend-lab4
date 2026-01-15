@@ -36,7 +36,7 @@ Since we have a completely routed and finalized design it is not expected that w
 Here multiple geometrical aspects of the design layout like shape width or spacing will be checked. The following Innovus command will perform this verification:
 
 ```console
-> verifyGeometry
+> verify_drc
 ```
 
 It is probable that you see multiple violations related to the filler cells. This is a known issue of the current flow. You can confirm this fact by loading the post-routing snapshot (source routing.enc) and rerunning the verifyGeometry command.
@@ -44,7 +44,7 @@ It is probable that you see multiple violations related to the filler cells. Thi
 ### Antenna checks
 On this section we will check whether some metal tracks are long enough to be vulnerable to the antenna effect. Antenna rules in the runset file set constraints on the maximum track length per each of the metal layers. This command will check whether some of these rules are violated in our design:
 ```console
-> verifyProcessAntenna
+> verify_antenna
 ```
 
 It is probable that you see some of these violations on your design (if you don't see any make sure you re-loaded the final PnR snapshot with source final.enc command). If this is the case you can use the GUI to observe the trace using the violation browser window. Click on an antenna violation and the GUI will automatically zoom to the affected track.
