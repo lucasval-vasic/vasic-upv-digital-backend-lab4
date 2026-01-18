@@ -173,3 +173,25 @@ After either rerunning synthesis with the fixed command or renaming the expected
 If we analyze the output of this we can see that very detailed information is produced about the mapping and the compare points. Check the log/rtl2final.lec.log logfile to ensure you don't miss anything of the output. The key line is the one starting with "No of diff points", this prints out the number of non-equivalent points. If everything went well this should report 0 non-equivalent points.
 
 Once you have seen the analysis pass try to modify either the netlist or the RTL code to produce non-equivalent points and the failure of LEC verification.
+
+### PNR checks
+
+We will need to write out the LEC .do file from an Innovus session where we have loaded the final.enc snapshot. First set up the pnr/out directory to be the target for .do file writes:
+
+```console
+> set write_lec_directory_naming_style ../out
+```
+
+Now write out the do file:
+
+```console
+> write_do_lec -golden_design ../in/${BLOCK_NAME}.vg -revised_design ../out/${BLOCK_NAME}.vg -log_file ../log/syn2pnr.lec.log > syn2pnr.lec.do
+```
+
+Finally execute the file in Conformal:
+
+```console
+> lec -do ../out/syn2pnr.lec.do  -nogui -xl
+```
+
+As before do an initial run to ensure verification passes and then modify either the synthesis or PNR netlists to make the comparison fail.
