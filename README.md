@@ -1,4 +1,4 @@
-<img width="1334" height="324" alt="image" src="https://github.com/user-attachments/assets/e5847d12-fc9f-48a8-bc74-27ccf7422fc1" /># Lab 4 - Final checks
+Lab 4 - Final checks
 
 ## Introduction
 In this lab, we will run several verification steps on our implemented design to ensure it is ready for manufacturing. First, we will perform Design Rule Checking (DRC) to confirm that the layout adheres to all silicon foundry constraints. Next, we will conduct static timing analysis to verify that the design meets timing requirements with appropriate margins. Finally, we will perform binary equivalence checking to ensure that the generated netlist faithfully matches the intended functionality of the RTL design.
