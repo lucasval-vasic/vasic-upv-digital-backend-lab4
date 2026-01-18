@@ -1,11 +1,26 @@
-# Lab 4 - Final checks
+<img width="1334" height="324" alt="image" src="https://github.com/user-attachments/assets/e5847d12-fc9f-48a8-bc74-27ccf7422fc1" /># Lab 4 - Final checks
 
 ## Introduction
-On this lab we will run different checks on our implemented design to ensure it is ready for manufacturing. More specifically we will perform DRC checks to ensure that the design complies with silicon foundry rules, then we will run static timing analysis to verify that the design has clean timing margins and finally we will run binary equivalence checks to confirm that the netlist functionality matches the intended RTL design functionality.
-
+In this lab, we will run several verification steps on our implemented design to ensure it is ready for manufacturing. First, we will perform Design Rule Checking (DRC) to confirm that the layout adheres to all silicon foundry constraints. Next, we will conduct static timing analysis to verify that the design meets timing requirements with appropriate margins. Finally, we will perform binary equivalence checking to ensure that the generated netlist faithfully matches the intended functionality of the RTL design.
 
 The lab includes files for the sync_fifo design, for the 0.18um X-Fab process. You will need data from all past labs as you will use tcons from Lab 1, synthesis files from Lab 2 and PNR files from Lab 3. If you complete all the lab you can also verify the async_fifo design.
 
+## Lab evaluation
+You are required to produce a lab report that documents the actions and experiments described in this guide. Present the results of your experiments using text, screenshots, or any other appropriate media.
+
+## Evaluation rubric
+The following breakdown shows how each section of this lab contributes to the overall marks:
+
+- DRC checks. 1 point
+- Parasitic extraction. 1 point
+- Functional mode STA. 1 point
+- MMMC STA setup. 1 point
+- MMMC STA run and analysis. 1 point
+- Signal Integrity (SI) analysis. 1 point
+- Synthesis LEC good run. 1 point
+- Synthesis LEC bad run. 1 point
+- PNR LEC good run. 1 point
+- PNR LEC good run. 1 point
 
 ## Lab start
 As usual, we will source the config_cadence.sh script to set up the paths for Cadence flow:
