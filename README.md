@@ -20,7 +20,7 @@ The following breakdown shows how each section of this lab contributes to the ov
 - Synthesis LEC good run. 1 point
 - Synthesis LEC bad run. 1 point
 - PNR LEC good run. 1 point
-- PNR LEC good run. 1 point
+- PNR LEC bad run. 1 point
 
 ## Lab start
 As usual, we will source the config_cadence.sh script to set up the paths for Cadence flow:
