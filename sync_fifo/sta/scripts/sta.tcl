@@ -25,7 +25,7 @@ read_spef -rc_corner rc_cbest ../in/${BLOCK_NAME}_rc_cbest.spef
 # Add constraints
 ################################
 
-read_sdc ../../tcons/$BLOCK_NAME.sdc
+read_sdc ../../tcons/${BLOCK_NAME}_func.sdc
 
 ################################
 # Adjust timer settings
